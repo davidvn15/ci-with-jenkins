@@ -53,7 +53,7 @@ pipeline {
         steps {
             script {
                 sh """
-                    docker run -d --name spring-boot-app -p 8080:8080 ${DOCKER_IMAGE}
+                    docker run -d --name spring-boot-app --network=ci-network -p 8088:8088 ${DOCKER_IMAGE}
                 """
                 echo "Spring Boot application is running at http://localhost:8080"
             }
