@@ -20,4 +20,4 @@ ENV DB_URL=jdbc:postgresql://postgres-sql:5432/test_db
 ENV ACTIVE_PROFILE=${PROFILE}
 ENV JAR_VERSION=${APP_VERSION}
 
-CMD java -jar -Dspring.profiles.active=${ACTIVE_PROFILE} -Dspring.datasource.url=${DB_URL} dockerize-spring-boot-app-${JAR_VERSION}.jar
+CMD java -jar -Dspring.profiles.active=${ACTIVE_PROFILE} -Dspring.datasource.url=${DB_URL} spring-boot-app-${JAR_VERSION}.jar
